@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스마트 주차 관리 서비스</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>스마트 주차 관리 서비스</h1>
+
+    <!-- 필터 기능 -->
+    <div>
+        <label for="filter">필터 선택: </label>
+        <select id="filter">
+            <option value="all">전체 보기</option>
+            <option value="free">무료 주차장</option>
+            <option value="distance">가까운 주차장</option>
+        </select>
+        <button id="applyFilter">필터 적용</button>
+    </div>
+
+    <!-- 지도 -->
+    <div id="map" style="height: 500px; margin-top: 10px;"></div>
+
+    <!-- 주차장 목록 테이블 -->
+    <h2>가까운 주차장 목록</h2>
+    <table id="parkingTable" border="1" style="width: 100%; text-align: center;">
+        <thead>
+            <tr>
+                <th>순서</th>
+                <th>주차장 이름</th>
+                <th>주소</th>
+                <th>현재 차량 수</th>
+                <th>총 공간</th>
+                <th>거리 (km)</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

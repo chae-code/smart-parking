@@ -1,0 +1,14 @@
+[
+    {
+        "PARKING_NAME": "주차장 A",
+        "CUR_PARKING": 15,
+        "LAT": 37.5665,
+        "LNG": 126.9780
+    },
+    {
+        "PARKING_NAME": "주차장 B",
+        "CUR_PARKING": 10,
+        "LAT": 37.5700,
+        "LNG": 126.9800
+    }
+]
